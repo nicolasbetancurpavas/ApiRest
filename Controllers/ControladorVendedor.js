@@ -25,14 +25,14 @@ export class ControladorVendedor {
 
     async buscarVendedorPorId(request, response) {
 
-        let idVendedor = request.params.idVendedor //Recibo id de la peticion
+        let idVendedor = request.params.id //Recibo id de la peticion
 
         let objetoServicioVendedor = new ServicioVendedor()
 
         try {
             response.status(200).json({
                 "mensaje": "Exito en la consulta " + idVendedor,
-                "datos": await objetoServicioVendedor.buscarVendedorPorId(idHabitacion)
+                "datos": await objetoServicioVendedor.buscarVendedorPorId(idVendedor)
             })
 
         } catch (error) {
